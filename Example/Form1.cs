@@ -36,7 +36,8 @@ namespace WindowsFormsApp1
             //in ra danh sách các object
             for (int i = 0; i<predicted.objects.Length; i++)
             {
-                Console.WriteLine(predicted.objects[i].className.ToString());
+                YOLOobject obj = predicted.objects[i];
+                Console.WriteLine(String.Format("{0}: {1}", obj.className, obj.confident.ToString()));
             }
 
             this.Text = "Detected: " + predicted.objects.Length.ToString();

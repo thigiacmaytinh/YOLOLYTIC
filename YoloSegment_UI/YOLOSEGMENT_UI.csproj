@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C55C654B-9B9B-46BF-8ABF-4848B4D7C9C0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>YoloSegment</RootNamespace>
+    <AssemblyName>YoloSegment</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <WarningLevel>5</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>yolov8.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge.Video">
+      <HintPath>..\packages\AForge_2.2.5.0\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\packages\AForge_2.2.5.0\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="CameraWall, Version=1.0.9789.30736, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\CameraWall.dll</HintPath>
+    </Reference>
+    <Reference Include="FFMPEG, Version=0.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\FFMPEG.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio">
+      <HintPath>..\packages\NAudio\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TGMTcontrols, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\TGMTcontrols.dll</HintPath>
+    </Reference>
+    <Reference Include="YOLO-x64, Version=1.0.9789.30897, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\YOLO-x64.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\lib\TGMTcs\src\TGMTdraw.cs">
+      <Link>TGMTcs\TGMTdraw.cs</Link>
+    </Compile>
+    <Compile Include="..\lib\TGMTcs\src\TGMTform.cs">
+      <Link>TGMTcs\TGMTform.cs</Link>
+    </Compile>
+    <Compile Include="..\lib\TGMTcs\src\TGMThardware.cs">
+      <Link>TGMTcs\TGMThardware.cs</Link>
+    </Compile>
+    <Compile Include="..\lib\TGMTcs\src\TGMTimage.cs">
+      <Link>TGMTcs\TGMTimage.cs</Link>
+    </Compile>
+    <Compile Include="..\lib\TGMTcs\src\TGMTregistry.cs">
+      <Link>TGMTcs\TGMTregistry.cs</Link>
+    </Compile>
+    <Compile Include="..\lib\TGMTcs\src\TGMTshape.cs">
+      <Link>TGMTcs\TGMTshape.cs</Link>
+    </Compile>
+    <Compile Include="..\lib\TGMTcs\src\TGMTsound.cs">
+      <Link>TGMTcs\TGMTsound.cs</Link>
+    </Compile>
+    <Compile Include="..\lib\TGMTcs\src\TGMTthread.cs">
+      <Link>TGMTcs\TGMTthread.cs</Link>
+    </Compile>
+    <Compile Include="..\lib\TGMTcs\src\TGMTutil.cs">
+      <Link>TGMTcs\TGMTutil.cs</Link>
+    </Compile>
+    <Compile Include="EngineMgr.cs" />
+    <Compile Include="FormCamera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCamera.Designer.cs">
+      <DependentUpon>FormCamera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExtractVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExtractVideo.Designer.cs">
+      <DependentUpon>FormExtractVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFolder.Designer.cs">
+      <DependentUpon>FormFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImage.Designer.cs">
+      <DependentUpon>FormImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVideo.Designer.cs">
+      <DependentUpon>FormVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWebcam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWebcam.Designer.cs">
+      <DependentUpon>FormWebcam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupRecent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupRecent.Designer.cs">
+      <DependentUpon>PopupRecent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util.cs" />
+    <EmbeddedResource Include="FormCamera.resx">
+      <DependentUpon>FormCamera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExtractVideo.resx">
+      <DependentUpon>FormExtractVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFolder.resx">
+      <DependentUpon>FormFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImage.resx">
+      <DependentUpon>FormImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVideo.resx">
+      <DependentUpon>FormVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWebcam.resx">
+      <DependentUpon>FormWebcam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupRecent.resx">
+      <DependentUpon>PopupRecent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy16.png" />
+    <None Include="Resources\Open-file16.png" />
+    <None Include="Resources\double_select_16.png" />
+    <Content Include="yolov8.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

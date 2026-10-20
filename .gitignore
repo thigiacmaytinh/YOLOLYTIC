@@ -1,2 +1,10 @@
 Example/obj/
 .vs/
+packages/Microsoft.ML.OnnxRuntime.1.26.0/
+packages/Microsoft.ML.OnnxRuntime.Managed.1.26.0/
+packages/System.Buffers.4.5.1/
+packages/System.Numerics.Vectors.4.5.0/
+packages/System.Runtime.CompilerServices.Unsafe.4.5.3/
+packages/System.Memory.4.5.5/
+Yololytic_UI/obj/
+YoloSegment_UI/obj/
