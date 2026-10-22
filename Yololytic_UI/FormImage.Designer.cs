@@ -151,7 +151,7 @@ namespace Yololytic
             this.btn_predict.Stroke = 0;
             this.btn_predict.StrokeColor = System.Drawing.Color.Gray;
             this.btn_predict.TabIndex = 10;
-            this.btn_predict.Text = "Predict";
+            this.btn_predict.Text = "Start";
             this.btn_predict.Transparency = false;
             this.btn_predict.Click += new System.EventHandler(this.btn_predict_Click);
             // 

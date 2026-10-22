@@ -202,6 +202,9 @@ namespace Yololytic
         {
             if(btn_detect.Text == "Start")
             {
+                if(workerDetect.IsBusy)
+                    return;
+
                 btn_detect.Text = "Stop";
 
                 _watch.Start();
